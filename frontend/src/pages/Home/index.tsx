@@ -22,10 +22,10 @@ const Home: React.FC = () => {
     ]}
     options={{
       hAxis: {
-        title: 'Valor(R$)',
+        title: 'Trimestre',
       },
       vAxis: {
-        title: 'Trimestre',
+        title: 'Valor(R$)',
       },
       series: {
         1: { curveType: 'function' },
