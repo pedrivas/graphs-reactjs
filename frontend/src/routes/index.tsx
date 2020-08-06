@@ -5,7 +5,7 @@ import Home from '../pages/Home';
 
 const Routes: React.FC = () => (
   <Switch>
-    <Route path="/:xaxis/:yaxis" component={Home}/>
+    <Route path="/:xAxis/:yAxis/:xValues/:yValues" component={Home}/>
   </Switch>
 )
 

@@ -3,7 +3,9 @@ import { Chart } from "react-google-charts";
 import { useParams } from 'react-router-dom';
 
 const Home: React.FC = () => {
-  const {xaxis, yaxis} = useParams();
+  const {xAxis, yAxis, xValues, yValues} = useParams();
+  let listXValues = xValues.split('-');
+  let listYValues = yValues.split('-');
 
   return (
     <Chart
@@ -13,21 +15,25 @@ const Home: React.FC = () => {
     loader={<div>Loading Chart</div>}
     data={[
       ['x', '2020', '2019'],
-      ['Jan', 1500, 2000],
-      ['Fev', 3500, 5000],
-      ['Mar', 2000, 1200],
-      ['Abr', 2560, 2500],
-      ['Mai', 1200, 500],
-      ['Jun', 5300, 8520],
-      ['Jul', 6300, 4520],
-      ['Ago', 2700, 1900],
+      ['Jan', parseFloat(listXValues[0] ), parseFloat(listYValues[0] )],
+      ['Fev', parseFloat(listXValues[1] ), parseFloat(listYValues[1] )],
+      ['Mar', parseFloat(listXValues[2] ), parseFloat(listYValues[2] )],
+      ['Abr', parseFloat(listXValues[3] ), parseFloat(listYValues[3] )],
+      ['Mai', parseFloat(listXValues[4] ), parseFloat(listYValues[4] )],
+      ['Jun', parseFloat(listXValues[5] ), parseFloat(listYValues[5] )],
+      ['Jul', parseFloat(listXValues[6] ), parseFloat(listYValues[6] )],
+      ['Ago', parseFloat(listXValues[7] ), parseFloat(listYValues[7] )],
+      ['Set', parseFloat(listXValues[8] ), parseFloat(listYValues[8] )],
+      ['Out', parseFloat(listXValues[9] ), parseFloat(listYValues[9] )],
+      ['Nov', parseFloat(listXValues[10]), parseFloat(listYValues[10])],
+      ['Dez', parseFloat(listXValues[11]), parseFloat(listYValues[11])]
     ]}
     options={{
       hAxis: {
-        title: xaxis,
+        title: xAxis,
       },
       vAxis: {
-        title: yaxis,
+        title: yAxis,
       },
       series: {
         1: { curveType: 'function' },
