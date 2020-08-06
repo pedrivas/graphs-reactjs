@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     chartType="LineChart"
     loader={<div>Loading Chart</div>}
     data={[
-      ['x', '2020', '2019'],
+      ['x', xAxis, yAxis],
       ['1º Tri', parseFloat(listXValues[0] ), parseFloat(listYValues[0] )],
       ['2º Tri', parseFloat(listXValues[1] ), parseFloat(listYValues[1] )],
       ['3º Tri', parseFloat(listXValues[2] ), parseFloat(listYValues[2] )],
@@ -22,10 +22,10 @@ const Home: React.FC = () => {
     ]}
     options={{
       hAxis: {
-        title: xAxis,
+        title: 'Valor(R$)',
       },
       vAxis: {
-        title: yAxis,
+        title: 'Trimestre',
       },
       series: {
         1: { curveType: 'function' },
