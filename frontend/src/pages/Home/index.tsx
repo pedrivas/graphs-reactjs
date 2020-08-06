@@ -15,18 +15,10 @@ const Home: React.FC = () => {
     loader={<div>Loading Chart</div>}
     data={[
       ['x', '2020', '2019'],
-      ['Jan', parseFloat(listXValues[0] ), parseFloat(listYValues[0] )],
-      ['Fev', parseFloat(listXValues[1] ), parseFloat(listYValues[1] )],
-      ['Mar', parseFloat(listXValues[2] ), parseFloat(listYValues[2] )],
-      ['Abr', parseFloat(listXValues[3] ), parseFloat(listYValues[3] )],
-      ['Mai', parseFloat(listXValues[4] ), parseFloat(listYValues[4] )],
-      ['Jun', parseFloat(listXValues[5] ), parseFloat(listYValues[5] )],
-      ['Jul', parseFloat(listXValues[6] ), parseFloat(listYValues[6] )],
-      ['Ago', parseFloat(listXValues[7] ), parseFloat(listYValues[7] )],
-      ['Set', parseFloat(listXValues[8] ), parseFloat(listYValues[8] )],
-      ['Out', parseFloat(listXValues[9] ), parseFloat(listYValues[9] )],
-      ['Nov', parseFloat(listXValues[10]), parseFloat(listYValues[10])],
-      ['Dez', parseFloat(listXValues[11]), parseFloat(listYValues[11])]
+      ['1º Tri', parseFloat(listXValues[0] ), parseFloat(listYValues[0] )],
+      ['2º Tri', parseFloat(listXValues[1] ), parseFloat(listYValues[1] )],
+      ['3º Tri', parseFloat(listXValues[2] ), parseFloat(listYValues[2] )],
+      ['4º Tri', parseFloat(listXValues[3] ), parseFloat(listYValues[3] )],
     ]}
     options={{
       hAxis: {
